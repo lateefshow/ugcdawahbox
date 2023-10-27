@@ -217,7 +217,7 @@ $cursor = $client->executeQuery("$dbname.$collection", $query);
 <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Create Pack - UGC Admin Dashboard</title>
+  <title>View All Packs - UGC Admin Dashboard</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	
   <!-- Tailwind is included -->
@@ -352,7 +352,7 @@ $cursor = $client->executeQuery("$dbname.$collection", $query);
           </li>
           <li class="unactive">
             <a href="onepack.php">
-              <span>View One Packs</span>
+              <span>View One Pack</span>
             </a>
           </li>
 		  <li class="unactive">
