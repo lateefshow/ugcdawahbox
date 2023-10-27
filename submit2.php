@@ -10,7 +10,7 @@ try {
     $client = new MongoDB\Driver\Manager("mongodb://localhost:27017");
     
     // Create a query to retrieve documents
-    $dbname = 'ugc';
+    $dbname = 'ugcall';
     $collection = 'Users';
     $query = new MongoDB\Driver\Query([]);
     
@@ -29,12 +29,12 @@ function getNextSequence($name) {
     $command = new MongoDB\Driver\Command([
         'findAndModify' => 'usercounters',
         'query' => ['_id' => $name],
-        'update' => ['$inc' => ['seq' => 1]],
+        'update' => ['$inc' => ['seq' => 54]],
         'new' => true,
         'upsert' => true
     ]);
 
-    $result = $client->executeCommand('ugc', $command);
+    $result = $client->executeCommand('ugcall', $command);
     $res = current($result->toArray());
     if (isset($res->value->seq)) {
         return $res->value->seq;

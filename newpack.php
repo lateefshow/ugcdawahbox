@@ -76,7 +76,7 @@ function getNextSequence($name) {
     $command = new MongoDB\Driver\Command([
         'findAndModify' => 'counters',
         'query' => ['_id' => $name],
-        'update' => ['$inc' => ['seq' => 122]],
+        'update' => ['$inc' => ['seq' => 1]],
         'new' => true,
         'upsert' => true
     ]);
@@ -175,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['ids']) && isset($_POS
 <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Create Pack - UGC Admin Dashboard</title>
+  <title>New Pack - UGC Admin Dashboard</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	
   <!-- Tailwind is included -->
@@ -313,7 +313,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['ids']) && isset($_POS
           </li>
           <li class="unactive">
             <a href="onepack.php">
-              <span>View One Packs</span>
+              <span>View One Pack</span>
             </a>
           </li>
 		  <li class="unactive">

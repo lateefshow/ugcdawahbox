@@ -182,7 +182,7 @@ try {
           </li>
           <li>
             <a href="onepack.php">
-              <span>View One Packs</span>
+              <span>View One Pack</span>
             </a>
           </li>
 		  <li>
